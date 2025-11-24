@@ -1,0 +1,56 @@
+<style>
+  .album-card-wrapper {
+    display: block;
+    box-sizing: border-box;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .album-card-wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  .album-card-wrapper a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .album-card-wrapper figure {
+    margin: 0;
+  }
+
+  .album-card-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.25s ease;
+  }
+
+  .album-card-wrapper:hover img {
+    transform: scale(1.03);
+  }
+</style>
+
+{{ $gallery := partial "get-gallery.html" . }}
+{{ with $gallery }}
+<div class="album-card-wrapper">
+  <a class="card" href="{{ .page.RelPermalink }}" title="{{ .page.Title }}">
+    <figure style="background-color: {{ .color }}">
+      <img class="lazyload" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}"
+        data-src="{{ .thumbnail.RelPermalink }}" alt="{{ .page.Title }}" />
+    </figure>
+    <div>
+      <h2 style="font-style: italic; margin-bottom: 0.1rem;">{{ .page.Title }}</h2>
+      <p style="margin-top: 0; line-height: 1.2; margin-bottom: 0;">
+        {{ $p := or .page . }}
+        {{ with $p.Params.genre }}
+        {{ . }}
+        {{ end }}
+      </p>
+    </div>
+  </a>
+</div>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ partial "title.html" . }}
+{{ partial "gallery.html" . }}
+
+{{ with .Content }}
+<section class="prose" style="margin-top: 2rem;">
+  <div style="text-align:center;">
+    {{ . }}
+  </div>
+</section>
+{{ end }}
+
+{{ partial "related.html" . }}
+{{ end }}
