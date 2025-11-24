@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+
+<nav style="position: absolute; top: 1.5rem; right: 2rem;">
+    <a href="/research/" style="margin-right: 1.5rem;">Research</a>
+    <a href="/practice/" style="margin-right: 1.5rem;">Practice</a>
+    <a href="/cv_1118.pdf">CV</a>
+</nav>
+<div style="max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; font-family: sans-serif; line-height: 1.6;">
+
+    <div style="display: flex; align-items: flex-start; gap: 4rem;">
+
+        <!-- Left: Academic Intro -->
+        <div style="flex: 2;">
+            <h1 style="margin-bottom: 0.5rem; font-size: 2.2rem;">{{ .Title }}</h1>
+            <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: #444; font-weight: normal; font-style: italic;">
+                pronounced as /həʊ iːˈjɑʊ/ in Mandarin Chinese 👋
+            </h3>
+
+            <p style="margin-bottom: 1.5rem;">{{ .Site.Params.description }}</p>
+
+            <div style="margin-bottom: 2rem;">
+                <div style="line-height: 1.5; font-size: 1rem;">
+                    {{ .Content | safeHTML }}
+                </div>
+                <style>
+                    main p {
+                        margin-bottom: 2rem;
+                        /* 段落之间空一格距离 */
+                    }
+                </style>
+            </div>
+
+        </div>
+
+        <!-- Right: Profile Image -->
+        <div style="flex: 1; text-align: center; margin-top: 5rem;">
+            <img src="/images/lively.png" alt="Profile photo"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+            <h3 style="margin-top: 5rem;"> 📬 <a href="mailto:yiyaohe1211@gmail.com">yiyaohe1211@gmail.com</a></h3>
+            <h3 style="margin-top: 1rem;"> 🌏 <a href="https://en.wikipedia.org/wiki/Hunan">Hunan</a> & <a
+                    href="https://en.wikipedia.org/wiki/Shanghai">Shanghai</a>, China </a></h3>
+        </div>
+
+    </div>
+</div>
+{{ end }}
