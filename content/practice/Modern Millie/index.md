@@ -2,6 +2,10 @@
 title: Thoroughly Modern Millie
 genre: 摩登米莉
 category: Stage Management
+
+description: >
+  *"Not for the life of me!"*
+
 ---
 
 <div align="center">

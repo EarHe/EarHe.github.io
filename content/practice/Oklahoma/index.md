@@ -2,6 +2,10 @@
 title: Oklahoma!
 genre: 俄克拉荷马
 category: Stage Management
+
+description: >
+  *"Oh what a beautiful morning, what a beautiful day~"*
+
 ---
 
 <div align="center">

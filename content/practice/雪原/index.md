@@ -2,6 +2,10 @@
 title: Xueyuan
 genre: 雪原
 category: Scenography & Design
+
+description: >
+  *"Shaking off the weight of the snow, in search of a path of return."*
+
 ---
 
 

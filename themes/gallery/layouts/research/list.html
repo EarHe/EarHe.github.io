@@ -1,0 +1,164 @@
+{{ define "main" }}
+
+<nav style="position: absolute; top: 1.5rem; right: 2rem;">
+    <a href="/CV_1125.pdf" style="margin-right: 1.5rem;">CV</a>
+    <a href="/research/" style="margin-right: 1.5rem;">Research</a>
+    <a href="/practice/">Practice</a>
+</nav>
+
+<style>
+    /* Ensure long-content matches Practice and forces prose to use full width inside it */
+    .long-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        line-height: 1.65;
+    }
+
+    /* Tailwind Typography (.prose) may constrain width; override inside long-content */
+    .long-content .prose {
+        max-width: none !important;
+        width: 100% !important;
+    }
+
+    .research-wrapper {
+        max-width: 1165px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4.5rem;
+    }
+
+    .research-card {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+        background: #141414;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        align-items: flex-start;
+        min-height: 180px;
+    }
+
+    .research-left {
+        flex: 1;
+    }
+
+    /* media container to keep image constrained and aligned to metadata row */
+    .research-media {
+        width: 260px;
+        /* fixed media column width */
+        display: flex;
+        align-items: flex-start;
+        /* align media top with left content start */
+        justify-content: center;
+        padding-left: 0.5rem;
+        /* small horizontal gap inside media column */
+        box-sizing: border-box;
+    }
+
+    .research-image {
+        max-width: 220px;
+        /* ensure image never grows too wide */
+        width: 100%;
+        height: auto;
+        /* respect aspect ratio */
+        max-height: 220px;
+        /* prevent very tall images from breaking layout */
+        border-radius: 8px;
+        object-fit: contain;
+        /* preserve full image, no cropping */
+        background: #fff;
+        /* subtle backdrop so contain images read well */
+        padding: 0.25rem;
+        /* tiny inner padding so image doesn't touch borders */
+    }
+
+    .research-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #e5e5e5;
+        margin: 0 0 0.2rem 0;
+    }
+
+    .research-meta {
+        font-size: 1.0rem;
+        color: #444;
+        margin-bottom: 0.6rem;
+        font-style: italic;
+    }
+
+    .research-abstract {
+        line-height: 1.65;
+        color: #737373;
+    }
+
+    /* Responsive: stack card on small screens */
+    @media (max-width: 780px) {
+        .research-card {
+            flex-direction: column;
+        }
+
+        .research-image {
+            width: 100%;
+            height: auto;
+            max-height: 320px;
+            object-fit: contain;
+            margin: 0.5rem 0;
+        }
+    }
+</style>
+
+<div class="long-content">
+    <header class="page-header" style="margin-bottom: 2rem; text-align: center;">
+        <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">
+            {{ .Title }}
+        </h1>
+
+        <div class="page-description prose prose-neutral"
+            style="max-width: 1300px; line-height: 1.65; color: #737373; text-align: center; margin: auto;">
+            {{ .Params.description | markdownify }}
+        </div>
+    </header>
+
+    <div style="height: 3rem;"></div>
+
+    <div class="research-wrapper">
+
+        {{ range sort .Pages ".Params.index" "desc" }}
+
+        <div class="research-card">
+
+            <div class="research-left">
+                <div class="research-title">{{ .Title }}</div>
+
+                <div class="research-meta">
+                    {{ with .Params.authors }}<div>{{ . | markdownify }}</div>{{ end }}
+                    {{ with .Params.year }}<div><strong>Year:</strong> {{ . }}</div>{{ end }}
+                </div>
+
+                <div class="research-abstract">
+                    {{ with .Params.abstract }}
+                    {{ . | markdownify }}
+                    {{ else }}
+                    {{ .Summary | markdownify }}
+                    {{ end }}
+                </div>
+            </div>
+
+            {{ with .Resources.GetMatch .Params.image }}
+            <div class="research-media">
+                <img class="research-image" src="{{ .RelPermalink }}" alt="Research Image">
+            </div>
+            {{ end }}
+
+        </div>
+
+        {{ end }}
+
+    </div>
+
+</div> <!-- /.long-content -->
+
+
+{{ end }}

@@ -1,8 +1,6 @@
 ---
 title: Research
 description: >
-  Selected experiences from my theatre practice and cultural work.  
-  These projects span **production, stage management, and art volunteer work**, 
-  reflecting both artistic collaboration and organizational roles.
+  My research primarily lies at the intersection of **Performance Studies** and **Human-Computer Interaction (HCI)**. I critically examine how technology performs and how people perform technology through viewing ***HCI as a performative and dramaturgical process***.
 weight: 2
 ---

@@ -2,6 +2,10 @@
 title: Betrayal
 genre: 背叛
 category: Scenography & Design
+
+description: >
+  *"We circle back to where it all began, realizing that the ending was inscribed in the beginning itself."*
+
 ---
 
 
@@ -9,7 +13,7 @@ category: Scenography & Design
 
 ## *Betrayal「背叛」*
 
-Adapted from the classic work written by Harold Pinter  
+Adapted from the classic work written by  <u>[Harold Pinter](https://en.wikipedia.org/wiki/Harold_Pinter)</u>  
 Produced by Pei Zhao  
 
 Director: Jingsong Zhang  

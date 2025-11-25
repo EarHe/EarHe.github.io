@@ -4,13 +4,14 @@ genre: 拼音猫历险记
 category: Performance Production
 
 description: >
-  *A playful odyssey through the Pinyin Kingdom, where finding a voice becomes the greatest adventure of all !*
+  *A playful odyssey through the Pinyin Kingdom, where finding a voice becomes the greatest adventure of all!*
 
 ---
 
 <div align="center">
 
 ## *The Adventures of PinyinCat「拼音猫历险记」*
+Sponsored by the *Traditional Renewal Program* of Beijing Tianqiao Performing Arts Center  
 Adapted by Manling Song from the picture book by Haidong Song  
 Produced by Yiyao He, Yiwen Li, Manling Song  
 

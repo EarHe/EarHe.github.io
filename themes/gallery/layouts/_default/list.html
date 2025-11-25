@@ -1,50 +1,76 @@
 {{ define "main" }}
-{{ partial "title.html" . }}
 
-{{ $all := where .Pages "Params.private" "ne" true }}
+<nav style="position: absolute; top: 1.5rem; right: 2rem;">
+  <a href="/CV_1125.pdf" style="margin-right: 1.5rem;">CV</a>
+  <a href="/research/" style="margin-right: 1.5rem;">Research</a>
+  <a href="/practice/" style="margin-right: 1.5rem;">Practice</a>
+</nav>
 
-<section class="galleries" style="display: flex; flex-direction: column; gap: 2rem; width: 100%;">
+<header class="page-header" style="margin-bottom: 2rem; text-align: center;">
+  <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">
+    {{ .Title }}
+  </h1>
 
-  <div
-    style="background: rgba(0,0,0,0.05); padding: 1.5rem; margin: 2rem 0; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
-    <h2 style="font-weight: 800; font-size: 1.6rem; margin-top: 0; margin-bottom: 0.8rem;">
-      🎭 Performance Production
-    </h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-      {{ range where $all "Params.category" "Performance Production" }}
-      <div style="flex: 0 0 calc(33.333% - 1rem);">
-        {{ partial "album-card.html" . }}
-      </div>
-      {{ end }}
-    </div>
+  <div class="page-description prose prose-neutral"
+    style="max-width: 1200px; line-height: 1.65; color: #737373; text-align: center; margin: auto;">
+    {{ .Params.description | markdownify }}
   </div>
+</header>
 
-  <div
-    style="background: rgba(0,0,0,0.05); padding: 1.5rem; margin: 2rem 0; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
-    <h2 style="font-weight: 800; font-size: 1.6rem; margin-top: 0; margin-bottom: 0.8rem;">
-      🎭 Stage Management
-    </h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-      {{ range where $all "Params.category" "Stage Management" }}
-      <div style="flex: 0 0 calc(33.333% - 1rem);">
-        {{ partial "album-card.html" . }}
-      </div>
-      {{ end }}
-    </div>
-  </div>
+<style>
+  .long-content {
+    max-width: 1300px;
+    margin: auto;
+    line-height: 1.65;
+  }
+</style>
+<div class="long-content">
 
-  <div
-    style="background: rgba(0,0,0,0.05); padding: 1.5rem; margin: 2rem 0; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
-    <h2 style="font-weight: 800; font-size: 1.6rem; margin-top: 0; margin-bottom: 0.8rem;">
-      🎭 Scenography & Design
+  {{ $all := where .Pages "Params.private" "ne" true }}
+
+  <section class="galleries" style="display: flex; flex-direction: column; gap: 2rem; width: 100%;">
+
+    <div
+      style="background: rgba(0,0,0,0.05); padding: 1.5rem; margin: 2rem 0; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+      <h2 style="font-weight: 800; font-size: 1.6rem; margin-top: 0; margin-bottom: 0.8rem;">
+        🎭 Performance Production
+      </h2>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
-        {{ range where $all "Params.category" "Scenography & Design" }}
+        {{ range where $all "Params.category" "Performance Production" }}
         <div style="flex: 0 0 calc(33.333% - 1rem);">
           {{ partial "album-card.html" . }}
         </div>
         {{ end }}
       </div>
-  </div>
+    </div>
 
-</section>
+    <div
+      style="background: rgba(0,0,0,0.05); padding: 1.5rem; margin: 2rem 0; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+      <h2 style="font-weight: 800; font-size: 1.6rem; margin-top: 0; margin-bottom: 0.8rem;">
+        🎭 Stage Management
+      </h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+        {{ range where $all "Params.category" "Stage Management" }}
+        <div style="flex: 0 0 calc(33.333% - 1rem);">
+          {{ partial "album-card.html" . }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div
+      style="background: rgba(0,0,0,0.05); padding: 1.5rem; margin: 2rem 0; border-radius: 12px; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+      <h2 style="font-weight: 800; font-size: 1.6rem; margin-top: 0; margin-bottom: 0.8rem;">
+        🎭 Scenography & Design
+        <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+          {{ range where $all "Params.category" "Scenography & Design" }}
+          <div style="flex: 0 0 calc(33.333% - 1rem);">
+            {{ partial "album-card.html" . }}
+          </div>
+          {{ end }}
+        </div>
+    </div>
+
+  </section>
+</div>
 {{ end }}

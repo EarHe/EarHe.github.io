@@ -2,6 +2,10 @@
 title: Qinqgulu
 genre: 情姑录
 category: Stage Management
+
+description: >
+  *"Asceticism versus desire, fantasy versus reality, the dreamscape versus the truth... In this chaos, who truly holds the reins?"*
+
 ---
 
 

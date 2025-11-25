@@ -4,7 +4,7 @@ genre: 是谁偷走了我的睡眠
 category: Performance Production
 
 description: >
-  
+  *"Day casts its questions into the Night, yet the Night never returns them unchanged."*
 
 ---
 
@@ -35,7 +35,7 @@ Photography by Zhong Qin and Xinran Yao
 
 Duanjun Theatre, Shanghai Theatre Academy, China, 2020
 
-<u>[*See the official post (in Chinese)*](https://mp.weixin.qq.com/s/UzCVvBf6FSkNlknAZmrrMw)</u>
+<u>[*See the official post (in Chinese)*](https://mp.weixin.qq.com/s/o449KUPjLfMfHFGAuHbSIA)</u>
 
 <img src="/images/SleepGroup.png" alt="Group Photo" style="width:60%; max-width:600px; margin-top:1rem;">
 
