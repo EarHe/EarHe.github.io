@@ -1,1 +1,9 @@
 /* custom.css */
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background-color: #000 !important;
+    color: #d4d4d4 !important;
+}

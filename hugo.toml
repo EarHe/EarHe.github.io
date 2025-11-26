@@ -7,3 +7,6 @@ theme = "gallery"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[params]
+  defaultTheme = "dark"
