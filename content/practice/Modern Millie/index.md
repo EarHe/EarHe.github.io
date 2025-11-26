@@ -12,7 +12,7 @@ description: >
 
 ## *Thoroughly Modern Millie「摩登米莉」*
 
-Annual performance of undergraduate students major in Musical Acting at STA (Class of 2022)
+Annual performance of undergraduate students major in Musical Acting at STA (Class of 2022)  
 Revival version of the Broadway classic musical <u>[*Thoroughly Modern Millie*](https://en.wikipedia.org/wiki/Thoroughly_Modern_Millie_(musical))</u>  
 Produced by Pan Lei
 

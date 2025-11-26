@@ -12,7 +12,7 @@ description: >
 
 ## *Oklahoma!「俄克拉荷马」*
 
-Graduation performance of undergraduate students major in Musical Acting at STA (Class of 2022)
+Graduation performance of undergraduate students major in Musical Acting at STA (Class of 2022)  
 Revival version of the Broadway classic musical *Oklahoma!*  
 Produced by Pan Lei
 
@@ -33,7 +33,7 @@ Graphic Design: Ruoyu Yang, Huanfu Wang
 Multimedia Design: Huanfu Wang  
 Prop Design: Youqing Zhang  
 
-Assistant Producer: Xinyu Li, Shan He, Xiaomeng Su, Shiyun Xu
+Assistant Producer: Xinyu Li, Shan He, Xiaomeng Su, Shiyun Xu  
 Costume and Makeup Assistant: Hang Xu, Tingna Shao  
 
 Photography by Yingzhou Huang
