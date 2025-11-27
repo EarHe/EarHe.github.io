@@ -1,5 +1,5 @@
 ---
-title: Yiyao He 「何祎瑶」
+title: Homepage
 description: >
   Welcome to my personal site!
 weight: 1

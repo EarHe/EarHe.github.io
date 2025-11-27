@@ -1,0 +1,149 @@
+{{ define "main" }}
+
+<nav style="position: absolute; top: 1.5rem; right: 2rem;">
+    <a href="/CV_1125.pdf" style="margin-right: 1.5rem;">CV</a>
+    <a href="/research/" style="margin-right: 1.5rem;">Research</a>
+    <a href="/practice/" style="margin-right: 1.5rem;">Practice</a>
+    <a href="/misc/">Misc</a>
+</nav>
+
+<style>
+    .misc-container {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    /* Left column: card stack */
+    .misc-left {
+        display: flex;
+        flex-direction: column;
+        gap: 3.0rem;
+    }
+
+    .misc-card {
+        background: #141414;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        margin-bottom: 2.2rem;
+        margin-top: 0.8rem;
+    }
+
+    .misc-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 1.5rem;
+    }
+
+    .misc-content {
+        color: #a3a3a3;
+        line-height: 1.65;
+    }
+
+    /* Right column: images/albums */
+    .misc-right {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .misc-image {
+        max-height: 350px;
+        width: auto;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        margin-top: 0.2rem;
+        object-fit: cover;
+    }
+
+    .misc-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.4rem;
+    }
+
+    .misc-gallery-thumb {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    @media(max-width: 840px) {
+        .misc-container {
+            grid-template-columns: 1fr;
+        }
+
+        .misc-right {
+            order: -1;
+        }
+    }
+</style>
+
+
+<!-- Page Header -->
+<header class="page-header" style="margin-bottom: 3rem; text-align: center;">
+    <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem;">
+        {{ .Title }}
+    </h1>
+
+    <div class="page-description prose prose-neutral"
+        style="max-width: 900px; line-height: 1.65; color: #737373; text-align: center; margin: auto;">
+        {{ .Params.description | markdownify }}
+    </div>
+</header>
+
+
+<!-- Two-column misc main layout -->
+<div class="misc-container">
+
+    <!-- LEFT COLUMN -->
+    <div class="misc-left">
+        {{ range sort .Pages ".Params.index" "desc" }}
+
+        <div class="misc-card">
+            <div class="misc-title">{{ .Title | markdownify}}</div>
+
+            <div class="misc-content">
+                {{ .Content }}
+            </div>
+        </div>
+
+        {{ end }}
+        <div style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem; margin-left: 2rem;">
+            ✨ Thanks for being here!
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="misc-right">
+        {{ range sort .Pages ".Params.index" "desc" }}
+
+        <!-- If single image -->
+        {{ with .Resources.GetMatch .Params.image }}
+        <img class="misc-image" src="{{ .RelPermalink }}" alt="">
+        {{ end }}
+
+        <!-- If gallery folder -->
+        {{ if .Params.galleryfolder }}
+        <div class="misc-gallery-scroll" style="display:flex; overflow-x:auto; gap:1rem; padding-bottom:0.4rem;">
+            {{ range .Resources.Match (printf "%s/*" .Params.galleryfolder) }}
+            <div style="flex:0 0 auto;">
+                <img class="misc-image" src="{{ .RelPermalink }}" alt=""
+                    style="height:350px; width:auto; border-radius:12px; object-fit:cover; display:block;">
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{ end }}
+    </div>
+
+</div>
+
+{{ end }}

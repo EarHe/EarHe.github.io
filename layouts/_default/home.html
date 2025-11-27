@@ -5,14 +5,16 @@
     <a href="/CV_1125.pdf" style="margin-right: 1.5rem;">CV</a>
     <a href="/research/" style="margin-right: 1.5rem;">Research</a>
     <a href="/practice/" style="margin-right: 1.5rem;">Practice</a>
+    <a href="/misc/">Misc</a>
 </nav>
+
 <div style="max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; font-family: sans-serif; line-height: 1.6;">
 
     <div style="display: flex; align-items: flex-start; gap: 4rem;">
 
         <!-- Left: Academic Intro -->
         <div style="flex: 2;">
-            <h1 style="margin-bottom: 0.5rem; font-size: 2.2rem;">{{ .Title }}</h1>
+            <h1 style="margin-bottom: 0.5rem; font-size: 2.2rem;"> Yiyao He 「何祎瑶」</h1>
             <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: #444; font-weight: normal; font-style: italic;">
                 pronounced as /həʊ iːˈjɑʊ/ in Mandarin Chinese 👋
             </h3>
@@ -43,5 +45,35 @@
         </div>
 
     </div>
+
+    <!-- Contact Section -->
+    <div
+        style="margin-top: 4rem; padding: 2rem; background: #0d0d0d; border-radius: 12px; max-width: 800px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+        <h2 style="font-size: 2rem; font-weight: 700; color: #fafafa; margin-bottom: 1.5rem; text-align:center;">
+            Contact
+        </h2>
+        <h3 style="margin-top: 0; margin-bottom: 1.5rem; color: #c7c7c7; font-weight: normal; text-align:center;">
+            Feel free to drop me a message here!
+        </h3>
+
+        <form action="https://formsubmit.co/yiyaohe1211@gmail.com" method="POST"
+            style="display:flex; flex-direction:column; gap:1.2rem;">
+
+            <input type="text" name="name" placeholder="Your name" required
+                style="padding:0.8rem 1rem; border-radius:8px; border:none; background:#222; color:#eee;">
+
+            <input type="email" name="email" placeholder="Your email" required
+                style="padding:0.8rem 1rem; border-radius:8px; border:none; background:#222; color:#eee;">
+
+            <textarea name="message" placeholder="Message" rows="5" required
+                style="padding:0.8rem 1rem; border-radius:8px; border:none; background:#222; color:#eee; line-height:1.5;"></textarea>
+
+            <button type="submit"
+                style="padding:0.9rem 1rem; background:#333; color:white; font-weight:600; border:none; border-radius:8px; cursor:pointer; width:150px; margin:auto;">
+                Send Message
+            </button>
+        </form>
+    </div>
+
 </div>
 {{ end }}

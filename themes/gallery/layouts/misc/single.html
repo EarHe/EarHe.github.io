@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<style>
+    .long-content {
+        max-width: 1200px;
+        margin: auto;
+        line-height: 1.65;
+    }
+
+    .research-body {
+        max-width: 900px;
+        margin: 1.5rem auto 3rem auto;
+        line-height: 1.7;
+    }
+
+    .research-image {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin: 1rem 2rem 0;
+    }
+</style>
+
+<div class="long-content">
+
+    {{ partial "title.html" . }}
+
+    <div class="research-body">
+
+        {{ with .Params.image }}
+        <img class="research-image" src="{{ . | relURL }}" alt="Research Image">
+        {{ end }}
+
+        {{ .Content }}
+    </div>
+
+</div>
+
+{{ end }}
