@@ -1,0 +1,9 @@
+---
+index: 1
+
+title: "The Impact of Artificial Intelligence Application on Corporate Forward-looking Textual Disclosure"
+
+authors: "Bachelor Thesis in Accounting (Beijing Normal University, 2026), advised by <u>[Prof. Hua Tang](https://bibs.bnu.edu.cn/teachers/qzjs/fg/d08707fb538c4dddbed37e9a0e8273b5.htm)</u>."
+
+abstract: "📑 We investigate whether corporate artificial intelligence (AI) application influences ***the tone of forward-looking textual disclosures*** within annual reports. Using textual analysis of Management Discussion and Analysis (MD&A) from Chinese A-share listed companies between 2011 and 2024, we measure the sentiment of forward-looking statements to examine the informational consequences of AI adoption. Our findings indicate that corporate AI application significantly enhances the positivity of forward-looking disclosure tones, a result that remains robust after addressing endogeneity with an instrumental variable approach. We show that this positive effect is more pronounced among ***asset-intensive firms***, those with ***lower managerial myopia***, and those subject to ***weaker external audit supervision***, suggesting that AI adoption exerts a stronger signaling effect under specific operational and governance conditions. We further document that AI influences disclosure behavior through multiple channels: ***affecting actual operational efficiency***, ***improving the corporate information environment***, and ***adjusting disclosure strategies***. Together, our findings suggest that AI technology not only transforms internal business operations but also fundamentally reshapes corporate disclosure practices, extending the literature on information disclosure from a technological transformation perspective and providing novel empirical evidence on the capital market information effects of AI application."
+---
